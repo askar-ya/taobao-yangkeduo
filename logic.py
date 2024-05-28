@@ -1,5 +1,4 @@
 import json
-import requests
 import re
 from googletrans import Translator
 
@@ -9,38 +8,48 @@ from playwright.sync_api import sync_playwright
 translator = Translator()
 
 
-def pars_yangkeduo():
+def pars_yangkeduo(link: str):
     with sync_playwright() as playwright:
-        browser = playwright.firefox.launch(headless=False)
+        browser = playwright.firefox.launch(headless=True)
         context = browser.new_context()
         with open('yangkeduo.json', 'r', encoding='utf-8') as f:
             context.add_cookies(json.load(f))
 
         page = context.new_page()
-        page.goto('https://mobile.yangkeduo.com/goods.html?_wvx=10&refer_share_uin=TBGCYJCYIJXDUZWAGIBABL34XQ'
-                  '_GEXDA&_oak_share_time=1716353890&share_uin=TBGCYJCYIJXDUZWAGIBABL34XQ_GEXDA&page_from=26&'
-                  '_wv=41729&refer_share_channel=copy_link&refer_share_id=WRS3wI6mey9yLMc1zjAPtUMm9frcFCyr&_oak'
-                  '_share_snapshot_num=9800&pxq_secret_key=DOVJTWHFI5F3Q2E3RANKTPKSTU5BEF474SJDYJ7VBCTH6OJVMPCA'
-                  '&goods_id=579761211467')
-        img_box = page.query_selector('._2wJiTrdH').query_selector_all('img')
-        img = []
-        for pic in img_box:
-            if pic.get_attribute('src') is not None:
-                img.append(pic.get_attribute('src'))
-            if pic.get_attribute('data-src') is not None:
-                img.append(pic.get_attribute('data-src'))
-        print(img)
-        print(len(img))
-        price = page.query_selector('._15NyfC_w').inner_text()
-        print(price)
+        try:
+            page.goto(link)
 
-        description = page.query_selector('._1fdrZL9O.enable-select').inner_text()
-        print(description)
+            img_box = page.query_selector('._2wJiTrdH').query_selector_all('img')
+            img = []
+            for pic in img_box:
+                if pic.get_attribute('src') is not None:
+                    img.append(pic.get_attribute('src'))
+                if pic.get_attribute('data-src') is not None:
+                    img.append(pic.get_attribute('data-src'))
+            if len(img) == 0:
+                img = None
+            price = page.query_selector('._1vQZeIX1').inner_text()
 
-        page.wait_for_timeout(10000)
+            description = page.query_selector('._1fdrZL9O.enable-select').inner_text()
+
+            ok = True
+        except Exception as e:
+            print(e)
+            ok = False
+
         # ---------------------
         context.close()
         browser.close()
+
+    if ok:
+        return {
+            'ok': True,
+            'price': f'{price} ¥',
+            'description': translator.translate(description, dest='ru').text,
+            'img': img
+        }
+    else:
+        return {'ok': False}
 
 
 def pars_taobao(link: str):
