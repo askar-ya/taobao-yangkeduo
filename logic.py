@@ -1,5 +1,4 @@
 import json
-import re
 from googletrans import Translator
 
 from playwright.sync_api import sync_playwright
@@ -61,45 +60,21 @@ def pars_taobao(link: str):
 
         page = context.new_page()
 
-        def check_res(res):
-            try:
-                if res.json()['ret'] == ["SUCCESS::调用成功"]:
-                    return True
-            except Exception as esx:
-                print(esx)
-
         try:
             page.goto(link)
-            with page.expect_response(
-                    lambda response:
-                    (response.url[:26] == "https://h5api.m.taobao.com") and check_res(response)
-            ) as response_info:
-                data = response_info.value.json()['data']
-                link = page.url
-                price = re.search('&price=(.+?)&', link).group(1)
-        except Exception as es:
-            print(es)
-            data = False
 
-    if data is not False:
-        out = {'ok': True}
-        if 'images' in data['item']:
-            out['img'] = data['item']['images']
-        if 'videos' in data['item']:
-            out['videos'] = []
-            for video in data['item']['videos']:
-                out['videos'].append(video['url'])
-        out['title'] = translator.translate(data['item']['title'], dest='ru').text
-        out['price'] = f'{price} ¥'
-        try:
-            description = ''
-            raw = data['componentsVO']['extensionInfoVO']['infos'][2]['items']
-            for text in raw:
-                description += text['text'][0]
-                out['description'] = translator.translate(description, dest='ru').text
+            out = {'ok': True}
+            page.wait_for_selector('div[class="ItemHeader--root--DXhqHxP"]')
+            title = page.query_selector('div[class="ItemHeader--root--DXhqHxP"]').inner_text()
+            out['title'] = translator.translate(title, dest='ru').text
+            price = page.query_selector('span[class="Price--priceText--2nLbVda"]').inner_text()
+            out['price'] = f'{price} ¥'
+            img_box = page.query_selector('ul[class="PicGallery--thumbnails--1cEhJzK"]').query_selector_all('img')
+            out['img'] = []
+            for i in img_box:
+                out['img'].append('https:' + i.get_attribute('src')[:-23])
+            description = page.query_selector('div[class="ItemDetail--attrs--3t-mTb3"]').inner_text()
+            out['description'] = translator.translate(description, dest='ru').text
         except Exception as e:
-            print(e)
+            out = {'ok': False, 'error': e}
         return out
-
-    else:
-        return {'ok': False}

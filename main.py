@@ -82,12 +82,13 @@ def taobao(message):
         bot.send_message(user_id, 'Загружаю...')
         data = logic.pars_taobao(url)
         if data['ok'] is True:
+            text = (data['title'] + '\n\n' + data['price'] + '\n\n' + data['description'])[:1023]
             if data['img'] is not None:
                 images = []
                 for n, i in enumerate(data['img']):
                     caption = None
                     if n == 0:
-                        caption = data['title'] + '\n\n' + data['price']
+                        caption = text
                     images.append(types.InputMediaPhoto(i, caption=caption))
 
                 chunk_size = 10
@@ -95,17 +96,8 @@ def taobao(message):
                 for chunk in chunks[::-1]:
                     bot.send_media_group(user_id, chunk)
             else:
-                bot.send_message(user_id, data['title'] + '\n\n' + data['price'])
-            if 'videos' in data:
-                videos = []
-                for video in data['videos'][:4]:
-                    videos.append(types.InputMediaVideo(video))
-                bot.send_media_group(user_id, videos)
-            if data['description'] is not None:
-                file = open('Описание.txt', 'w', encoding='utf-8')
-                file.write(data['description'])
-                file.close()
-                bot.send_document(user_id, open('Описание.txt', 'r', encoding='utf-8'))
+                bot.send_message(user_id, text)
+
         else:
             bot.send_message(user_id, 'Неверная ссылка.')
     except IndexError:
