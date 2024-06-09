@@ -53,7 +53,7 @@ def pars_yangkeduo(link: str):
 
 def pars_taobao(link: str):
     with sync_playwright() as playwright:
-        browser = playwright.firefox.launch(headless=True)
+        browser = playwright.firefox.launch(headless=False)
         context = browser.new_context()
         with open('taobao_cookies.json', 'r', encoding='utf-8') as f:
             context.add_cookies(json.load(f))
