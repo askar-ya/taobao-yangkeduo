@@ -1,7 +1,7 @@
 [
 {
     "domain": ".mobile.yangkeduo.com",
-    "expirationDate": 1749799318.864481,
+    "expirationDate": 1750020468.543687,
     "hostOnly": false,
     "httpOnly": false,
     "name": "dilx",
@@ -15,7 +15,7 @@
 },
 {
     "domain": ".mobile.yangkeduo.com",
-    "expirationDate": 1749799318.86436,
+    "expirationDate": 1750020468.543586,
     "hostOnly": false,
     "httpOnly": false,
     "name": "jrpl",
@@ -29,7 +29,7 @@
 },
 {
     "domain": ".mobile.yangkeduo.com",
-    "expirationDate": 1749799318.864449,
+    "expirationDate": 1750020468.543661,
     "hostOnly": false,
     "httpOnly": false,
     "name": "njrpl",
@@ -99,7 +99,7 @@
 },
 {
     "domain": "mobile.yangkeduo.com",
-    "expirationDate": 1718868248.921471,
+    "expirationDate": 1719089270.300874,
     "hostOnly": true,
     "httpOnly": false,
     "name": "pdd_vds",
@@ -108,7 +108,7 @@
     "secure": false,
     "session": false,
     "storeId": "0",
-    "value": "gaLLNOQyOPyNILLmotbyOtmGENIPbOOOGbtPIiNPtnIyiLnLGGPQIIbINaPb",
+    "value": "gahLrOltcyBGfGumYNsQfGDouLDbDyeQCGCEsQBIcOsQcaeNwOfaBthmstrb",
     "id": 8
 },
 {
@@ -127,21 +127,7 @@
 },
 {
     "domain": "mobile.yangkeduo.com",
-    "expirationDate": 1718264657.593057,
-    "hostOnly": true,
-    "httpOnly": false,
-    "name": "rec_list_personal",
-    "path": "/",
-    "sameSite": "None",
-    "secure": false,
-    "session": false,
-    "storeId": "0",
-    "value": "rec_list_personal_tbb3ca",
-    "id": 10
-},
-{
-    "domain": "mobile.yangkeduo.com",
-    "expirationDate": 1720855449.191808,
+    "expirationDate": 1721076467.810118,
     "hostOnly": true,
     "httpOnly": false,
     "name": "webp",
@@ -151,6 +137,6 @@
     "session": false,
     "storeId": "0",
     "value": "1",
-    "id": 11
+    "id": 10
 }
 ]
