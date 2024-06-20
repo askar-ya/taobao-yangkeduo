@@ -82,19 +82,26 @@ def taobao(message):
         bot.send_message(user_id, 'Загружаю...')
         data = logic.pars_taobao(url)
         if data['ok'] is True:
-            text = f'{data['title']}\n\n{data['price']}\n\n{data['specifications']}'[:1023]
+            text = f'{data['title']}\n\n{data['price']}\n\n{data['specifications']}'
+            text_singly = False
+            if len(text) > 1023:
+                text_singly = True
             if data['img'] is not None:
                 images = []
                 for n, i in enumerate(data['img']):
                     caption = None
                     if n == 0:
-                        caption = text
+                        if not text_singly:
+                            caption = text
+                        else:
+                            caption = None
                     images.append(types.InputMediaPhoto(i, caption=caption))
 
                 chunk_size = 10
                 chunks = [images[i:i + chunk_size] for i in range(0, len(images), chunk_size)]
                 for chunk in chunks[::-1]:
                     bot.send_media_group(user_id, chunk)
+                bot.send_message(user_id, text[:4094])
             else:
                 bot.send_message(user_id, text)
 
