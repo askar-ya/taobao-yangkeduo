@@ -73,13 +73,12 @@ def pars_taobao(link: str):
             for i in img_box:
                 out['img'].append('https:' + i.get_attribute('src'))
 
-            sort = page.query_selector('div[class="SkuContent--content--2UKSo-9"]')
-            if sort:
-                sort = translator.translate(sort.inner_text(), dest='ru').text
-            size = page.query_selector('div[class="SkuContent--skuItem--3Nb1tMw"]')
-            if size:
-                size = translator.translate(size.inner_text(), dest='ru').text
-            specifications = size + sort
+            variations = page.query_selector_all('div[class="SkuContent--skuItem--3Nb1tMw"]')
+            specifications = ''
+            if variations:
+                for sku in variations:
+                    specifications += translator.translate(sku.inner_text(), dest='ru').text
+
             out['specifications'] = specifications
         except Exception as e:
             print(e)
