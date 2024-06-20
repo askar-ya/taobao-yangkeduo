@@ -82,7 +82,7 @@ def taobao(message):
         bot.send_message(user_id, 'Загружаю...')
         data = logic.pars_taobao(url)
         if data['ok'] is True:
-            text = (data['title'] + '\n\n' + data['price'])[:1023]
+            text = f'{data['title']}\n\n{data['price']}\n\n{data['specifications']}'[:1023]
             if data['img'] is not None:
                 images = []
                 for n, i in enumerate(data['img']):

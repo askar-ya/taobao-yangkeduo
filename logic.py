@@ -61,16 +61,27 @@ def pars_taobao(link: str):
         page = context.new_page()
 
         page.goto(link)
+        try:
+            out = {'ok': True}
+            page.wait_for_selector('div[class="ItemHeader--root--kdR5m3q"]')
+            title = page.query_selector('div[class="ItemHeader--root--kdR5m3q"]').inner_text()
+            out['title'] = translator.translate(title, dest='ru').text
+            price = page.query_selector('span[class="Price--priceText--1oEHppn"]').inner_text()
+            out['price'] = f'{price} ¥'
+            img_box = page.query_selector('ul[class="PicGallery--thumbnails--3EG14Q2"]').query_selector_all('img')
+            out['img'] = []
+            for i in img_box:
+                out['img'].append('https:' + i.get_attribute('src'))
 
-        out = {'ok': True}
-        page.wait_for_selector('div[class="ItemHeader--root--kdR5m3q"]')
-        title = page.query_selector('div[class="ItemHeader--root--kdR5m3q"]').inner_text()
-        out['title'] = translator.translate(title, dest='ru').text
-        price = page.query_selector('span[class="Price--priceText--1oEHppn"]').inner_text()
-        out['price'] = f'{price} ¥'
-        img_box = page.query_selector('ul[class="PicGallery--thumbnails--3EG14Q2"]').query_selector_all('img')
-        out['img'] = []
-        for i in img_box:
-            out['img'].append('https:' + i.get_attribute('src'))
-        print(out)
+            sort = page.query_selector('div[class="SkuContent--content--2UKSo-9"]')
+            if sort:
+                sort = translator.translate(sort.inner_text(), dest='ru').text
+            size = page.query_selector('div[class="SkuContent--skuItem--3Nb1tMw"]')
+            if size:
+                size = translator.translate(size.inner_text(), dest='ru').text
+            specifications = size + sort
+            out['specifications'] = specifications
+        except Exception as e:
+            print(e)
+            out = {'ok': False}
         return out
