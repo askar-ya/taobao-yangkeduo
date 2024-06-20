@@ -104,7 +104,7 @@ def taobao(message):
                 if text_singly:
                     chunk_size = 4094
                     chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
-                    for chunk in chunks[::-1]:
+                    for chunk in chunks:
                         bot.send_message(user_id, chunk)
             else:
                 bot.send_message(user_id, text)
