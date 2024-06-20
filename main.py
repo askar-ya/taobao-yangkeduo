@@ -101,7 +101,11 @@ def taobao(message):
                 chunks = [images[i:i + chunk_size] for i in range(0, len(images), chunk_size)]
                 for chunk in chunks[::-1]:
                     bot.send_media_group(user_id, chunk)
-                bot.send_message(user_id, text[:4094])
+                if text_singly:
+                    chunk_size = 4094
+                    chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
+                    for chunk in chunks[::-1]:
+                        bot.send_message(user_id, chunk)
             else:
                 bot.send_message(user_id, text)
 
