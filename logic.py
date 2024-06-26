@@ -63,17 +63,17 @@ def pars_taobao(link: str):
         page.goto(link)
         try:
             out = {'ok': True}
-            page.wait_for_selector('div[class="ItemHeader--root--kdR5m3q"]')
-            title = page.query_selector('div[class="ItemHeader--root--kdR5m3q"]').inner_text()
+            page.wait_for_selector('div[class="ItemHeader--root--DXhqHxP"]')
+            title = page.query_selector('div[class="ItemHeader--root--DXhqHxP"]').inner_text()
             out['title'] = translator.translate(title, dest='ru').text
-            price = page.query_selector('span[class="Price--priceText--1oEHppn"]').inner_text()
+            price = page.query_selector('span[class="Price--priceText--2nLbVda"]').inner_text()
             out['price'] = f'{price} ¥'
-            img_box = page.query_selector('ul[class="PicGallery--thumbnails--3EG14Q2"]').query_selector_all('img')
+            img_box = page.query_selector('ul[class="PicGallery--thumbnails--1cEhJzK"]').query_selector_all('img')
             out['img'] = []
             for i in img_box:
-                out['img'].append('https:' + i.get_attribute('src'))
-
-            variations = page.query_selector_all('div[class="SkuContent--skuItem--3Nb1tMw"]')
+                out['img'].append('https:' + (i.get_attribute('src').split('.jpg')[0]+'.jpg'))
+            print(title, price, out['img'])
+            variations = page.query_selector_all('div[class="BasicContent--sku--6N_nw6c"]')
             specifications = ''
             if variations:
                 for sku in variations:
