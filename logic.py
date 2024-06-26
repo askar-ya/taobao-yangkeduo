@@ -63,7 +63,7 @@ def pars_taobao(link: str):
         page.goto(link)
         try:
             out = {'ok': True}
-            page.wait_for_timeout(7000)
+            page.wait_for_selector('div[class="ItemHeader--root--DXhqHxP"]')
             title = page.query_selector('div[class="ItemHeader--root--DXhqHxP"]').inner_text()
             out['title'] = translator.translate(title, dest='ru').text
             price = page.query_selector('span[class="Price--priceText--2nLbVda"]').inner_text()
