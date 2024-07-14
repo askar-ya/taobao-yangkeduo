@@ -1,4 +1,6 @@
 import json
+import re
+
 from googletrans import Translator
 
 from playwright.sync_api import sync_playwright

@@ -1,3 +1,5 @@
+import json
+
 import telebot
 import os
 from dotenv import load_dotenv
@@ -11,7 +13,7 @@ load_dotenv()
 bot = telebot.TeleBot(token=os.getenv('TELEGRAM_BOT_TOKEN'))
 
 
-@bot.message_handler(commands=['start', 'taobao', 'yangkeduo'])
+@bot.message_handler(commands=['start', 'taobao', 'yangkeduo', 'update_taobao'])
 def start(message):
     user_id = message.chat.id
     if message.text == '/start':
@@ -34,6 +36,10 @@ def start(message):
     elif message.text == '/yangkeduo':
         bot.send_message(user_id, 'Отправьте ссылку на товар.')
         bot.register_next_step_handler(message, yangkeduo)
+
+    elif message.text == '/update_taobao':
+        bot.send_message(user_id, 'Отправьте куки.')
+        bot.register_next_step_handler(message, update_taobao)
 
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -113,6 +119,24 @@ def taobao(message):
             bot.send_message(user_id, 'Неверная ссылка.')
     except IndexError:
         bot.send_message(user_id, 'Неверная ссылка.')
+
+
+def update_taobao(message):
+    chat_id = message.chat.id
+    if message.content_type == 'document':
+
+        file_info = bot.get_file(message.document.file_id)
+        downloaded_file = bot.download_file(file_info.file_path)
+        cookies = json.loads(downloaded_file)
+        for i in range(len(cookies)):
+            if 'sameSite' in cookies[i]:
+                cookies[i]['sameSite'] = 'None'
+        print(cookies)
+        with open('taobao_cookies.json', 'w') as f:
+            json.dump(cookies, f)
+    else:
+        bot.send_message(chat_id, 'нужен файл, попробуйте еще раз')
+        bot.register_next_step_handler(message, update_taobao)
 
 
 bot.infinity_polling()
