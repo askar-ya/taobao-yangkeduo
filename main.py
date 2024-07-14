@@ -134,6 +134,7 @@ def update_taobao(message):
         print(cookies)
         with open('taobao_cookies.json', 'w') as f:
             json.dump(cookies, f)
+        bot.send_message(chat_id, 'Куки обновлены!')
     else:
         bot.send_message(chat_id, 'нужен файл, попробуйте еще раз')
         bot.register_next_step_handler(message, update_taobao)
