@@ -1,20 +1,49 @@
 [
-  {
-    "domain": ".tmall.com",
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752622232.352026,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "_cc_",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "Vq8l%2BKCLiw%3D%3D",
+    "id": 1
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752190232.350484,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "_hvn_lgc_",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "0",
+    "id": 2
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.352169,
     "hostOnly": false,
     "httpOnly": false,
     "name": "_l_g_",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "Ug%3D%3D",
-    "id": 1
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1720992109.837801,
+    "id": 3
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721062836.006185,
     "hostOnly": false,
     "httpOnly": false,
     "name": "_m_h5_tk",
@@ -23,12 +52,12 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "68c89045c03ac9ed1b5673481fdb9932_1720995709855",
-    "id": 2
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1720992109.837831,
+    "value": "49cb8979dfb156e223362db18b7ad47a_1721064995861",
+    "id": 4
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721062836.00624,
     "hostOnly": false,
     "httpOnly": false,
     "name": "_m_h5_tk_enc",
@@ -37,51 +66,109 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "e578c8cb14b5f009551ab97101f5f2b9",
-    "id": 3
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "64c1415433723be89833bf7d9e1787f7",
+    "id": 5
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.352279,
     "hostOnly": false,
     "httpOnly": false,
     "name": "_nk_",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "tb748025844907",
-    "id": 4
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 6
+},
+{
+    "domain": ".taobao.com",
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "_samesite_flag_",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": true,
+    "storeId": "0",
+    "value": "true",
+    "id": 7
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.35239,
     "hostOnly": false,
     "httpOnly": false,
     "name": "_tb_token_",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "354373f44e55e",
-    "id": 5
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "75b150ee7f3e3",
+    "id": 8
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721143840,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "_uetsid",
+    "path": "/",
+    "sameSite": "None",
+    "secure": false,
+    "session": false,
+    "storeId": "0",
+    "value": "312e7b9042bf11efac4b25763d5336fe",
+    "id": 9
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1754753440,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "_uetvid",
+    "path": "/",
+    "sameSite": "None",
+    "secure": false,
+    "session": false,
+    "storeId": "0",
+    "value": "312ea1d042bf11efa60eb922c4fbbe96",
+    "id": 10
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721950208.107758,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "3PcFlag",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "1721057407971",
+    "id": 11
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351333,
     "hostOnly": false,
     "httpOnly": false,
     "name": "cancelledSubSites",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "empty",
-    "id": 6
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1750952594.620795,
+    "id": 12
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1755617066.672135,
     "hostOnly": false,
     "httpOnly": false,
     "name": "cna",
@@ -90,51 +177,54 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "kgDVHgqrqG0CAbJDhG/ZI50K",
-    "id": 7
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "Ki0cH+RXvWACAbDV9DoAMbqf",
+    "id": 13
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.352331,
     "hostOnly": false,
     "httpOnly": true,
     "name": "cookie1",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "BqPjxUXRk095jVsKveL1OibkScUEjZcFpS0EwmFGMFw%3D",
-    "id": 8
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 14
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351513,
     "hostOnly": false,
     "httpOnly": true,
     "name": "cookie17",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "UUpgQcuYWbg1GGzUGA%3D%3D",
-    "id": 9
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 15
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351684,
     "hostOnly": false,
     "httpOnly": true,
     "name": "cookie2",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "11c1c79d07613fb0c0560736712ff062",
-    "id": 10
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1721274716.984492,
+    "value": "1bb6ef40141e6941ca1e212c2906243c",
+    "id": 16
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721345432.350635,
     "hostOnly": false,
     "httpOnly": true,
     "name": "cookie3_bak",
@@ -143,12 +233,12 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "11c1c79d07613fb0c0560736712ff062",
-    "id": 11
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1721274716.985099,
+    "value": "1bb6ef40141e6941ca1e212c2906243c",
+    "id": 17
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721345432.350708,
     "hostOnly": false,
     "httpOnly": false,
     "name": "cookie3_bak_exp",
@@ -157,38 +247,40 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "1721245915717",
-    "id": 12
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "1721316632213",
+    "id": 18
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351221,
     "hostOnly": false,
     "httpOnly": false,
     "name": "csg",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "cee0a2bd",
-    "id": 13
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "de4d5b75",
+    "id": 19
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351571,
     "hostOnly": false,
     "httpOnly": false,
     "name": "dnk",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "tb748025844907",
-    "id": 14
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1721274716.984604,
+    "id": 20
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721345432.351455,
     "hostOnly": false,
     "httpOnly": true,
     "name": "env_bak",
@@ -197,12 +289,54 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "FM%2BgwZ4N0qrtWWw4BuYKIRMbPaLBcbbInW34NDVElhXY",
-    "id": 15
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1723607516.984761,
+    "value": "FM%2BgzieMAfeHV7jcHIvs0YjFZR8AnaowboT3IrVfD1C0",
+    "id": 21
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351739,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "existShop",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "MTcyMTA1NzQzMg%3D%3D",
+    "id": 22
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752190232.350559,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "havana_lgc_exp",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "1752161432213",
+    "id": 23
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752190232.350407,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "havana_lgc2_0",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "eyJoaWQiOjIyMTc5NTMxOTU1NzgsInNnIjoiYzUwMzA1NDI4ZmI4YjNlZTExMzc1MzMwYzJkMGVlMjEiLCJzaXRlIjowLCJ0b2tlbiI6IjFmM29yMlVrU2M0V0VPTVREMUMzdUtRIn0",
+    "id": 24
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752622241.539736,
     "hostOnly": false,
     "httpOnly": false,
     "name": "hng",
@@ -212,11 +346,11 @@
     "session": false,
     "storeId": "0",
     "value": "GLOBAL%7Czh-CN%7CUSD%7C999",
-    "id": 16
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1736538708,
+    "id": 25
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1736610774,
     "hostOnly": false,
     "httpOnly": false,
     "name": "isg",
@@ -225,104 +359,109 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "BFdXd5o8_TrH4HlsiyRzcTaR5suhnCv-4GBqkamF3CaN2HYasG9GTuyyPmBGMAN2",
-    "id": 17
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "BGlpShDnKw1_JBe5RCcTKzlseBPDNl1o_0uoWQtfQ9CP0onkU4Z8OEKIlW5kz_Wg",
+    "id": 26
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351276,
     "hostOnly": false,
     "httpOnly": false,
     "name": "lgc",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
-    "storeId": "0",
-    "value": "tb748025844907",
-    "id": 18
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1752551516.984375,
-    "hostOnly": false,
-    "httpOnly": false,
-    "name": "lid",
-    "path": "/",
-    "sameSite": "None",
-    "secure": true,
     "session": false,
     "storeId": "0",
     "value": "tb748025844907",
-    "id": 19
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 27
+},
+{
+    "domain": ".taobao.com",
     "hostOnly": false,
     "httpOnly": false,
-    "name": "login",
+    "name": "sdkSilent",
     "path": "/",
     "sameSite": "None",
     "secure": true,
     "session": true,
     "storeId": "0",
-    "value": "true",
-    "id": 20
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "1721143835466",
+    "id": 28
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.352227,
     "hostOnly": false,
     "httpOnly": false,
     "name": "sg",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "789",
-    "id": 21
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 29
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752622232.350287,
     "hostOnly": false,
     "httpOnly": true,
     "name": "sgcookie",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "E100rfy7f3LLnalzl3Vh%2BKPjYvyqk%2FiApuY4cpegKD9dLaWVcKnyslUVIwJvYrxBCSgz2RaK%2FZxh23yqfR%2B1FJgFBMUsPMEQkKm8YozE3mj2AV0%3D",
-    "id": 22
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "E100hAgZbuBQU8P8e6m1OB%2FMYHybPKCkygKSnbg90ouG88IA2LjiVfL8cFyQJIpjErOFzLF8T%2Bm%2BKYsxV5zZz0QpR6AvZlVN4Amj1riRcxWio00%3D",
+    "id": 30
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351626,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "skt",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "10e12fcca24eea96",
+    "id": 31
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351118,
     "hostOnly": false,
     "httpOnly": false,
     "name": "sn",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "",
-    "id": 23
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 32
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351388,
     "hostOnly": false,
     "httpOnly": false,
     "name": "t",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "e3a8b22d869f8cde3145e8176fde060b",
-    "id": 24
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1736538708,
+    "value": "57c21cd77cf55410f942a42070976127",
+    "id": 33
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1736610774,
     "hostOnly": false,
     "httpOnly": false,
     "name": "tfstk",
@@ -331,24 +470,39 @@
     "secure": false,
     "session": false,
     "storeId": "0",
-    "value": "fvfjgVmRpmmfnS_WjKUyOpC3FEO6hiNUhVTO-NhqWIdv5f_hfZRNWh561gjJBsRVugN1-M92B1-N1qf5Afl4m-bt1CRTYkPUTZb2sCEFg4ZGmqYwWFLxbdL8wZ7_A0FUTZbvYsSR1WzM7LCMbhd9HKFJy3YikcI9BbQJqFYtDFhYPaKkWCLvkFK-wFTekfhaBbToZ37bPNzlxCcmxHKS6XikkKFcoAls1_LXh1QvVF8NNE9XvLSiQiCA4NCViL2iQCbPdG6O27GffibA6L1a44pBwh9pmsUZnnC25pd9FVhOPQxPXURL90TleZWOiigs6EfVTdtHFPhMQQCep9IjSybJMFIMK1rninQO-6XeO5GJGdIP9X-InSksPpc6PHz7PADZP30xOwjTBKJvrU-UPzMUlKLkPH5aPYOWHUYyYzaSLr1..",
-    "id": 25
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "fswitIfpV2T5AR-ASJD1GgTmRyfdfFMjurpxkx3VT2uQXKI_XWm4kysffAEqor4KRlpAflFHmua3ojsskqu0koPOvTB8flMj3rbReTKqofbzIq8x3GAy2GbRyTBd_HkcSaFxx-aZ-mgEbcJ2_McEX0kq0xuVx2omVI8auxS3Y2ivbhkq3DkE4mn2rVtEWrz_LNbKYg_-LNEEjf0262v0PJp-s4ri-K7b1cvszluH3Ku185Pb0r7DHYP7--czytvIBuVELcVh0BuZZ5ztArXkQVy3bRuTQwpt7RZUw-UF0Ku0T7lual7ptDVUXJcLUavm1Wz_Nj2AJTMTwuejaRWMP2hSmzDatwJgzg5DTQzP4KiFDJRXGfoIx46kzOEJrwJfGMjHa7GZAcWRxMAXXfoIx4IhxQ-r_DiNe",
+    "id": 34
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752593436.006278,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "thw",
+    "path": "/",
+    "sameSite": "None",
+    "secure": false,
+    "session": false,
+    "storeId": "0",
+    "value": "xx",
+    "id": 35
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1752622232.351892,
     "hostOnly": false,
     "httpOnly": false,
     "name": "tracknick",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "tb748025844907",
-    "id": 26
-  },
-  {
-    "domain": ".tmall.com",
+    "id": 36
+},
+{
+    "domain": ".taobao.com",
     "hostOnly": false,
     "httpOnly": false,
     "name": "uc1",
@@ -357,51 +511,54 @@
     "secure": true,
     "session": true,
     "storeId": "0",
-    "value": "existShop=false&cookie21=V32FPkk%2FhSg%2F&cookie15=URm48syIIVrSKA%3D%3D&pas=0&cookie14=UoYcA8H4aAOH9w%3D%3D&cookie16=UtASsssmPlP%2Ff1IHDsDaPRu%2BPw%3D%3D",
-    "id": 27
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "cookie21=VFC%2FuZ9aj3yE&cookie14=UoYcAjER4BA2eg%3D%3D&cookie16=VFC%2FuZ9az08KUQ56dCrZDlbNdA%3D%3D&cookie15=UtASsssmOIJ0bQ%3D%3D&pas=0&existShop=false",
+    "id": 37
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351153,
     "hostOnly": false,
     "httpOnly": true,
     "name": "uc3",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "vt3=F8dD3i%2FNrdNqV0baY34%3D&nk2=F5RCYRM7j8AVo2ib938%3D&lg2=VT5L2FSpMGV7TQ%3D%3D&id2=UUpgQcuYWbg1GGzUGA%3D%3D",
-    "id": 28
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "lg2=VT5L2FSpMGV7TQ%3D%3D&nk2=F5RCYRM7j8AVo2ib938%3D&vt3=F8dD3i%2FO9V%2Fu0Aof9iY%3D&id2=UUpgQcuYWbg1GGzUGA%3D%3D",
+    "id": 38
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.351791,
     "hostOnly": false,
     "httpOnly": true,
     "name": "uc4",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
-    "value": "nk4=0%40FY4Jj1yMJc7hesWCVMxt9WVUav5GN4Xg8A%3D%3D&id4=0%40U2gqztLVmFUk0Vrp7iok47QswkyGs9g0",
-    "id": 29
-  },
-  {
-    "domain": ".tmall.com",
+    "value": "id4=0%40U2gqztLVmFUk0Vrp7iok47QtIK1GRAh6&nk4=0%40FY4Jj1yMJc7hesWCVMxt9WVUa1rGSX1gpA%3D%3D",
+    "id": 39
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1723649432.350998,
     "hostOnly": false,
-    "httpOnly": false,
+    "httpOnly": true,
     "name": "unb",
     "path": "/",
     "sameSite": "None",
     "secure": true,
-    "session": true,
+    "session": false,
     "storeId": "0",
     "value": "2217953195578",
-    "id": 30
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1723607516.984942,
+    "id": 40
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1726270232.350851,
     "hostOnly": false,
     "httpOnly": true,
     "name": "wk_cookie2",
@@ -410,12 +567,12 @@
     "secure": true,
     "session": false,
     "storeId": "0",
-    "value": "162686f8fc52feb03392091bb2193717",
-    "id": 31
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1723607516.984732,
+    "value": "1ceaf2e5f52f63df2448e4ac8bb9096f",
+    "id": 41
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1726270232.350935,
     "hostOnly": false,
     "httpOnly": true,
     "name": "wk_unb",
@@ -425,11 +582,11 @@
     "session": false,
     "storeId": "0",
     "value": "UUpgQcuYWbg1GGzUGA%3D%3D",
-    "id": 32
-  },
-  {
-    "domain": ".tmall.com",
-    "expirationDate": 1721245909,
+    "id": 42
+},
+{
+    "domain": ".taobao.com",
+    "expirationDate": 1721316265,
     "hostOnly": false,
     "httpOnly": false,
     "name": "xlly_s",
@@ -439,6 +596,6 @@
     "session": false,
     "storeId": "0",
     "value": "1",
-    "id": 33
-  }
+    "id": 43
+}
 ]
