@@ -127,6 +127,7 @@ def update_taobao(message):
 
         file_info = bot.get_file(message.document.file_id)
         downloaded_file = bot.download_file(file_info.file_path)
+
         cookies = json.loads(downloaded_file)
         for i in range(len(cookies)):
             if 'sameSite' in cookies[i]:

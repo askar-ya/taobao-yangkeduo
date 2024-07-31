@@ -113,13 +113,3 @@ def pars_taobao(link: str):
                 print(e)
                 out = {'ok': False}
         return out
-
-
-pars_taobao('https://item.taobao.com/item.htm?ut_sk=1.ZMPh53VP/EADAKvVDYyt/w63_21380790'
-            '_1721040033668.Copy.1&id=728492754232&sourceType=item&price=9.9&suid=126B8'
-            '436-6EFA-4BD1-940E-FDA74C4CF5CE&shareUniqueId=27550709653&un=05b06129597522'
-            'dc922338b8dff87dc9&share_crt_v=1&un_site=0&spm=a2159r.13376460.0.0&tbSocial'
-            'PopKey=shareItem&sp_tk=ZWpaYTNZSDlMTU4%3D&cpp=1&shareurl=true&short_name=h.'
-            'g7q4jOx4WV2PS9E&bxsign=scdunfcrHeNDVPzRPO3ruNFzRlLAmF9OweglJ0Cq9xSJum2QW-iEZ'
-            'Ykl8ZkmAeOrY0dZVt5PNqos_ccASpAqAh5pBZSFyECrVLlT0wJRY_t6GbXULWx1a45NfVFansNlb'
-            'IgUQ3Bu7R-5HL_a81d-RVUXg&tk=ejZa3YH9LMN&app=macos_safari')
